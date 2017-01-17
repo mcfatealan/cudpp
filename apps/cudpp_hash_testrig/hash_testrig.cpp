@@ -687,7 +687,7 @@ int main(int argc, const char **argv)
     bool runMultivalueHash =
         runAll || checkCommandLineFlag(argc, argv, "multivalue");
 
-    unsigned kInputSize = 1000000;
+    unsigned kInputSize = 1000;
     commandLineArg(kInputSize, argc, argv, "n");
 
     unsigned kMaxIterations = 1;

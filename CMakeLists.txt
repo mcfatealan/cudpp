@@ -15,7 +15,7 @@ option(CUDPP_BUILD_SHARED_LIBS
 
 option(CUDPP_BUILD_APPLICATIONS
   "If on, builds the sample applications."
-  OFF
+  ON
   )
 
 option(CUDA_VERBOSE_PTXAS

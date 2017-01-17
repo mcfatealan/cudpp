@@ -17,6 +17,12 @@ set(CCFILES
   mt19937ar.cpp
   )
 
+set(CCFILES_MODIFIED
+  simplehash.cpp
+  random_numbers.cpp
+  mt19937ar.cpp
+  )
+
 set(HFILES
   mt19937ar.h
   random_numbers.h
@@ -59,8 +65,14 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 cuda_add_executable(cudpp_hash_testrig ${CCFILES} ${HFILES})
+cuda_add_executable(simplehash ${CCFILES_MODIFIED} ${HFILES})
 
 target_link_libraries(cudpp_hash_testrig
+  cudpp_hash
+  cudpp
+  )
+
+target_link_libraries(simplehash
   cudpp_hash
   cudpp
   )
